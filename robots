@@ -1,0 +1,39 @@
+# robots.txt — Majesté Presse Académie
+# Généré le 2026
+
+# Autoriser Google et Bing (bons robots)
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Bloquer les robots malveillants connus
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: BLEXBot
+Disallow: /
+
+User-agent: DataForSeoBot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+# Règle générale pour tous les autres robots
+User-agent: *
+Allow: /
+Crawl-delay: 10
+
+# Sitemap
+Sitemap: https://majeste-presse-academie.netlify.app/sitemap.xml

@@ -1,0 +1,24 @@
+# _headers — Majesté Presse Académie
+# Sécurité renforcée via Netlify Headers
+
+/*
+  # Empêche le clickjacking (intégration dans des iframes malveillantes)
+  X-Frame-Options: DENY
+
+  # Empêche les attaques XSS (injection de scripts malveillants)
+  X-XSS-Protection: 1; mode=block
+
+  # Empêche le navigateur de deviner le type de fichier
+  X-Content-Type-Options: nosniff
+
+  # Contrôle les informations envoyées lors des clics sur les liens
+  Referrer-Policy: strict-origin-when-cross-origin
+
+  # Force HTTPS (évite les connexions non sécurisées)
+  Strict-Transport-Security: max-age=31536000; includeSubDomains; preload
+
+  # Politique de sécurité du contenu (bloque les scripts non autorisés)
+  Content-Security-Policy: default-src 'self' https:; script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://www.google-analytics.com;
+
+  # Empêche l'accès aux fonctionnalités sensibles du navigateur
+  Permissions-Policy: camera=(), microphone=(), geolocation=(), payment=()
