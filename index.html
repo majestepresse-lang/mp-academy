@@ -1278,7 +1278,7 @@
 
     /* ── WhatsApp flottant ── */
     .wa-float {
-      position: fixed; bottom: 28px; right: 24px; z-index: 9998;
+      position: fixed; bottom: 28px; left: 24px; z-index: 9998;
       display: flex; flex-direction: column; align-items: flex-end; gap: 10px;
     }
     .wa-bubble {
@@ -1302,7 +1302,7 @@
       color: var(--gold); font-size: .75rem; font-weight: 700;
       padding: 6px 14px; white-space: nowrap;
       box-shadow: 0 4px 16px rgba(212,175,55,.15);
-      opacity: 0; transform: translateX(10px);
+      opacity: 0; transform: translateX(-10px);
       transition: all .3s; pointer-events: none;
     }
     .wa-float:hover .wa-tooltip {
